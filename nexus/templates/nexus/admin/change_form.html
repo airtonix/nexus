@@ -1,13 +1,13 @@
 {% extends "nexus/admin/base_site.html" %}
 {% load url from future %}
-{% load i18n admin_modify adminmedia %}
+{% load i18n admin_modify admin_static %}
 {% load nexus_admin %}
 
 {% block head %}
     {{ block.super }}
     {% url 'admin:jsi18n' as jsi18nurl %}
     <script type="text/javascript" src="{{ jsi18nurl|default:"../../../jsi18n/" }}"></script>
-    <link rel="stylesheet" type="text/css" href="{% admin_media_prefix %}css/widgets.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/widgets.css' %}" />
     {{ media }}
 {% endblock %}
 
